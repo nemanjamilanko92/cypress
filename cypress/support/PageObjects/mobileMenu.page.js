@@ -18,20 +18,9 @@ export default class MobilePage{
     SonyXPrice(){
       return cy.get('#product-price-1 > .price')
     }
-  //  SonyXPrice(){
-  //    const price = cy.get('#product-price-1 > .price')
-  //    price.then(e=>{
-  //     const priceOfSony = e.text()
-  //     Number(priceOfSony)
-  //     this.clickOnSony().click()
-  //     this.detailPrice().then(j=>{
-  //      let dPrice = j.text()
-  //       Number(dPrice)
-  //      expect(priceOfSony).to.equal(dPrice)
-  //     })
-  //    })
-  //   }
- 
+    clickonAddSonyToCart(){
+      const addTocart =  cy.get(':nth-child(1) > .product-info > .actions > .button > :nth-child(1) > span')
+      addTocart.click()
+    }
 
-     
 }

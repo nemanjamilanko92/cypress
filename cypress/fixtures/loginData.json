@@ -1,4 +1,3 @@
 {
-  "email":"admin@gmail.com",
-  "password":"Bar5slova"
+  "errorMsgOnMoreThen1000Units":"Some of the products cannot be ordered in requested quantity."
 }

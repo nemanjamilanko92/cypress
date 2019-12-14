@@ -1,8 +1,8 @@
 /// <reference types="cypress"/>
 import Landing from "../support/PageObjects/login.page";
 import MobilePage  from "../support/PageObjects/mobileMenu.page"
-
-describe("Verification of the product cost",()=>{
+import Cart from "../support/PageObjects/cart.page"
+describe("Adding more products than there is in a store",()=>{
   before(()=>{
    cy.visit(Cypress.env("url"))
     cy.fixture("loginData").then(function(data){
@@ -12,20 +12,14 @@ describe("Verification of the product cost",()=>{
     landing.clickOnMobileMenu();
   })
 
-it("Positive verification Test",function(){
+it("Positive verification test",function(){
 
  const mobilePage = new MobilePage();
  mobilePage.pageTitle().should("have.text","Mobile")
- mobilePage.SonyXPrice().then(e=>{
-  const priceOfSony = e.text()
-  Number(priceOfSony)
-  mobilePage.clickOnSony().click()
-  mobilePage.detailPrice().then(j=>{
-   let dPrice = j.text()
-    Number(dPrice)
-   expect(priceOfSony).to.equal(dPrice)
-  })
- })
+ mobilePage.clickonAddSonyToCart()
+ const cart = new Cart()
+ cart.qty("1000")
+ cart.errorMsg().should("contain.text",this.data.errorMsgOnMoreThen1000Units)
 
 })
 

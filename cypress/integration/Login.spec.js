@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 import Landing from "../support/PageObjects/login.page";
 import MobilePage  from "../support/PageObjects/mobileMenu.page"
-describe("Testing of login functionality",()=>{
+describe("Landing page validation",()=>{
 
 
   before(()=>{
@@ -13,7 +13,7 @@ describe("Testing of login functionality",()=>{
     
   })
 
-it("Positive Login Test",function(){
+it("Validate title of the landing page and mobile page",function(){
 
  const landing = new Landing();
  landing.pageTitle.should("have.be.at.least","This is demo site for")
