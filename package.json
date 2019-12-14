@@ -1,0 +1,16 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "nemanja",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.7.0",
+    "mocha": "6.2.2",
+    "mochawesome": "4.1.0"
+  }
+}

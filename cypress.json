@@ -1,0 +1,6 @@
+{
+  "reporter":"mochawesome",
+  "env":{
+    "url":"http://live.demoguru99.com/index.php/"
+  }
+}
