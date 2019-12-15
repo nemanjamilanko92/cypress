@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-import Landing from "../support/PageObjects/login.page";
+import Landing from "../support/PageObjects/landing.page";
 import MobilePage  from "../support/PageObjects/mobileMenu.page"
 describe("Landing page validation",()=>{
 

@@ -19,8 +19,7 @@ export default class MobilePage{
       return cy.get('#product-price-1 > .price')
     }
     clickonAddSonyToCart(){
-      const addTocart =  cy.get(':nth-child(1) > .product-info > .actions > .button > :nth-child(1) > span')
-      addTocart.click()
+     cy.get(':nth-child(1) > .product-info > .actions > .button > :nth-child(1) > span').click()
     }
 
 }

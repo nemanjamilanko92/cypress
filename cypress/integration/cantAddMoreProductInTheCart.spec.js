@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-import Landing from "../support/PageObjects/login.page";
+import Landing from "../support/PageObjects/landing.page";
 import MobilePage  from "../support/PageObjects/mobileMenu.page"
 import Cart from "../support/PageObjects/cart.page"
 describe("Adding more products than there is in a store",()=>{
